@@ -1,0 +1,48 @@
+class t {
+	int funct2(int n){
+		int x,y;		
+		if (n == 1 || n == 0) {
+			return 1;
+		}
+		return funct2(n-1) + funct2(n-2);
+	}
+
+	int test_unde_var1() {
+		{
+			{
+				int x,y;
+				x = 1;
+				y = 1;
+				{
+					print x+y, "\n", "hola\n";
+				}
+				print "fibonacci 5: ", funct2(5), "\n";
+				print y, "\n";
+				//print funct2(5);
+			}
+		}
+		return 3;
+	}
+	
+	void main() {
+		int x;
+		x = test_unde_var1();
+		print x+x*x, "\n";
+		x = funct2(3);
+		print x, "\n";
+		while(x<=10){
+			print x, "\n";
+			x = x+1;
+		}
+		x = x+100;
+		if (x<100) {
+			print "x menor a 100";
+		}else {
+			print "x mayor a 100";
+		}
+		x = 1;
+		for(x=1; x<20; x=x+1){
+			print "potato", x, "\n";
+		}
+	}
+}

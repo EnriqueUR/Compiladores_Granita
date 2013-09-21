@@ -1,0 +1,15 @@
+class _My_Class {
+	int function1(int __,bool h)
+	{
+		int uno;
+		int dos; 
+		bool tres;
+		if(a||b)
+		{
+			int c;
+		}
+	}
+	int function2(int __,int asi){	}
+	int function3(int __,bool hola,bool nada){	}
+	int function4(int __,int mas,bool salio,int dos) { }
+}
