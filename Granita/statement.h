@@ -12,6 +12,7 @@ public:
     int Linea;
     virtual newStatement *ValidarSemantica();
     virtual void PrintError(string msj);
+
 };
 
 #endif // STATEMENT_H
