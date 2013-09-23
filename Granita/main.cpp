@@ -8,7 +8,7 @@
 using namespace std;
 int main()
 {
-    sintactico *S = new sintactico("program17.txt");
+    sintactico *S = new sintactico("program10.txt");
     program *p;
     p = S->Program();
     p->print();

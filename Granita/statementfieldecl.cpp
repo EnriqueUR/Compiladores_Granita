@@ -29,8 +29,31 @@ void statementFieldecl::print()
     {
         cout<<this->id<<"=";
         this->constant->print();
-    }else
+    }
+    else
     {
+        list<string>::iterator it1;
+        it1 = this->list_only_id->begin();
+        while(it1 != this->list_only_id->end())
+        {
+            cout<<*it1;
+            it1++;
+        }
+        if(this->list_id != NULL && this->list_intConstant!= NULL){
+            list<string>::iterator it2;
+            it2 = this->list_id->begin();
+
+            list<exprIntConstant *>::iterator it3;
+            it3 = this->list_intConstant->begin();
+            while((it1 != this->list_only_id->end())||(it3 != this->list_intConstant->end()))
+            {
+                exprIntConstant* intconst = *it3;
+                cout<<*it2<<" ";
+                intconst->print();
+                it2++;
+                it3++;
+            }
+        }
 
     }
 }
