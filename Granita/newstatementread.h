@@ -1,10 +1,18 @@
 #ifndef NEWSTATEMENTREAD_H
 #define NEWSTATEMENTREAD_H
 
-class newStatementRead
+#include <list>
+
+#include "newstatement.h"
+#include "newexprlvalue.h"
+
+class newStatementRead: public newStatement
 {
 public:
-    newStatementRead();
+    newStatementRead(list<newExprLvalue*> * args);
+
+protected:
+    list<newExprLvalue*> * args;
 };
 
 #endif // NEWSTATEMENTREAD_H

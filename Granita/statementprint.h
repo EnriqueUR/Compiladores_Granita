@@ -4,6 +4,10 @@
 #include "statement.h"
 #include "exprargument.h"
 
+#include "newstatement.h"
+#include "newstatementprint.h"
+#include "newexpression.h"
+
 using namespace std;
 class statementPrint:public statement
 {

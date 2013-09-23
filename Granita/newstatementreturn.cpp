@@ -1,5 +1,6 @@
 #include "newstatementreturn.h"
 
-newStatementReturn::newStatementReturn()
+newStatementReturn::newStatementReturn(newExpression *retValue)
 {
+    this->returnValue = retValue;
 }

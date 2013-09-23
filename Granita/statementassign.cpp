@@ -13,7 +13,7 @@ void statementAssign::print()
     this->expr->print();
 }
 
-newStatement* statementAssign::validarSemantica() {
+newStatement* statementAssign::ValidarSemantica() {
     newExprLvalue* newLvalue = lvalue->ValidarSermantica();
     newExpression* newExprValue = expr->ValidarSermantica();
 

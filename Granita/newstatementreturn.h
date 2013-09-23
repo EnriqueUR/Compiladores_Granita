@@ -1,10 +1,16 @@
 #ifndef NEWSTATEMENTRETURN_H
 #define NEWSTATEMENTRETURN_H
 
-class newStatementReturn
+#include "newstatement.h"
+#include "newexpression.h"
+
+class newStatementReturn: public newStatement
 {
 public:
-    newStatementReturn();
+    newStatementReturn(newExpression* retValue);
+
+protected:
+    newExpression* returnValue;
 };
 
 #endif // NEWSTATEMENTRETURN_H

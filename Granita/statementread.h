@@ -4,6 +4,10 @@
 #include "exprlvalue.h"
 #include "statement.h"
 
+#include "newstatement.h"
+#include "newstatementread.h"
+#include "newexprlvalue.h"
+
 using namespace std;
 class statementRead:public statement
 {

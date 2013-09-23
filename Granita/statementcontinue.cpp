@@ -10,6 +10,6 @@ void statementContinue::print()
 }
 
 
-newStatement* statementContinue::validarSemantica() {
+newStatement* statementContinue::ValidarSemantica() {
     return new newStatementContinue();
 }

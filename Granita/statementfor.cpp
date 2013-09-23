@@ -43,7 +43,7 @@ void statementFor::print()
 
 }
 
-newStatement* statementFor::validarSemantica() {
+newStatement* statementFor::ValidarSemantica() {
     list<newStatementAssign*> *inits = new list<newStatement*>();
     list<statementAssign*>::iterator it1;
     it1 = this->initialValues->begin();
