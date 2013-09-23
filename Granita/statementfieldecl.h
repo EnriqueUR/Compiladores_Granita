@@ -17,6 +17,7 @@ public:
     statementFieldecl(Type tipo,list<string> *list_only_id, list<string> *list_id,list<exprIntConstant*> *intConstant, int linea);
     statementFieldecl(Type tipo,string id,Expression *constant,int linea);
     void print();
+    void PrintError(string msj);
     newStatement* ValidarSemantica();
 private:
     string id;
