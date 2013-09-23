@@ -8,6 +8,7 @@
 #include "newexpression.h"
 #include "newstatementblock.h"
 #include "newstatementwhile.h"
+#include "analisissemantico.h"
 
 class statementWhile:public statement
 {

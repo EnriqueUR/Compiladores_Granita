@@ -7,6 +7,7 @@
 #include "statementblock.h"
 
 #include "newstatementfor.h"
+#include "analisissemantico.h"
 
 class statementFor:public statement
 {

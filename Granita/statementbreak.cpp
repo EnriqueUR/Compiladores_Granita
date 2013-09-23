@@ -10,5 +10,9 @@ void statementBreak::print()
 }
 
 newStatement* statementBreak::ValidarSemantica(){
+    if (!AnalisisSemantico::dentroCiclo) {
+        PrintError("break debe estar dentro de un ciclo");
+        return NULL;
+    }
     return new newStatementBreak();
 }

@@ -4,6 +4,8 @@
 #include "statement.h"
 #include "newstatementbreak.h"
 
+#include "analisissemantico.h"
+
 class statementBreak : public statement
 {
 public:

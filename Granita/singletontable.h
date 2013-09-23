@@ -7,12 +7,13 @@ using namespace std;
 class SingletonTable
 {
 public:
-      map<string,Variable> *TablaSimbolos;
-      static SingletonTable* getInstance();
-
+    map<string,Variable*> *TablaSimbolos;
+    static SingletonTable* getInstance();
+    Variable* getSimbolo(string nombre);
+    void putSimbolo(string nombre, Variable* var);
 private:
-      SingletonTable();
-      static SingletonTable* pinstance;
+    SingletonTable();
+    static SingletonTable* pinstance;
 };
 
 #endif // SINGLETONTABLE_H

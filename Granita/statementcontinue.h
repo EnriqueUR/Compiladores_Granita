@@ -4,6 +4,8 @@
 #include "newstatementcontinue.h"
 #include "statement.h"
 
+#include "analisissemantico.h"
+
 class statementContinue: public statement
 {
 public:
