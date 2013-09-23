@@ -31,5 +31,5 @@ void statementBlock::print()
 }
 
 newStatement* statementBlock::ValidarSemantica() {
-
+return NULL;
 }

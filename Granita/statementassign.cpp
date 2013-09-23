@@ -14,7 +14,7 @@ void statementAssign::print()
 }
 
 newStatement* statementAssign::ValidarSemantica() {
-    newExprLvalue* newLvalue = lvalue->ValidarSermantica();
+    newExpression* newLvalue = lvalue->ValidarSermantica();
     newExpression* newExprValue = expr->ValidarSermantica();
 
     if (newLvalue == NULL || newExprValue == NULL) {

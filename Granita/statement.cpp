@@ -3,5 +3,5 @@
 statement::statement()
 {
 }
-newStatement * statement::validarSemante(){}
+newStatement * statement::ValidarSemantica(){return NULL;}
 void statement::PrintError(string msj){}

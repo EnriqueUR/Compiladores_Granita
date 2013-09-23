@@ -1,6 +1,6 @@
 #include "newstatementif.h"
 
-newStatementIf::newStatementIf(newExpression *expresion, newStatementBlock *trueBlock)
+newStatementIf::newStatementIf(newExpression *expresion, newStatement *trueBlock)
 {
     this->expresion = expresion;
     this->trueBlock = trueBlock;
@@ -8,8 +8,7 @@ newStatementIf::newStatementIf(newExpression *expresion, newStatementBlock *true
 }
 
 newStatementIf::newStatementIf(newExpression *expresion,
-                               newStatementBlock *trueBlock,
-                               newStatementBlock *falseBlock)
+                               newStatement *trueBlock, newStatement *falseBlock)
 {
     this->expresion = expresion;
     this->trueBlock = trueBlock;

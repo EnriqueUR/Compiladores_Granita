@@ -5,14 +5,14 @@
 #include "newexpression.h"
 #include "newstatementblock.h"
 
-class newStatementWhile
+class newStatementWhile:public newStatement
 {
 public:
-    newStatementWhile(newExpression* condicion, newStatementBlock* block);
+    newStatementWhile(newExpression* condicion, newStatement* block);
 
 protected:
     newExpression* condicion;
-    newStatementBlock* block;
+    newStatement* block;
 };
 
 #endif // NEWSTATEMENTWHILE_H

@@ -11,12 +11,12 @@
 class newStatementFor: public newStatement
 {
 public:
-    newStatementFor(list<newStatementAssign*> *initialValues, newExpression *expr,
-                    list<newStatementAssign*> *incrementValues, newStatementBlock *block);
+    newStatementFor(list<newStatement*> *initialValues, newExpression *expr,
+                    list<newStatement*> *incrementValues, newStatement *block);
 
 protected:
-    list<newStatementAssign*> *initialValues, incrementValues;
-    newStatementBlock* block;
+    list<newStatement*> *initialValues, *incrementValues;
+    newStatement* block;
     newExpression* expression;
 };
 

@@ -12,6 +12,7 @@ class statementIf : public statement
 public:
     statementIf(Expression *expr,statementBlock *block_true, int linea);
     statementIf(Expression *expr,statementBlock *block_true, statementBlock *block_false, int linea);
+    newStatement * ValidarSemantica();
     void print();
 
 private:

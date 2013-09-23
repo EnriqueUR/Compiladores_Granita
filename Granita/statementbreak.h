@@ -8,7 +8,9 @@ class statementBreak : public statement
 {
 public:
     statementBreak(int linea);
+    newStatement * ValidarSemantica();
     void print();
+
 };
 
 #endif // STATEMENTBREAK_H

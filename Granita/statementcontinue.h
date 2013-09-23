@@ -8,7 +8,9 @@ class statementContinue: public statement
 {
 public:
     statementContinue(int linea);
+    newStatement* ValidarSemantica();
     void print();
+
 };
 
 #endif // STATEMENTCONTINUE_H

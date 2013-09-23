@@ -10,6 +10,7 @@ class statementAssign:public statement
 {
 public:
     statementAssign(exprLvalue *lvalue,Expression *expr, int linea);
+    newStatement * ValidarSemantica();
     void print();
 
 protected:

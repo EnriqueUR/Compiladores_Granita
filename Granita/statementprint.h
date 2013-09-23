@@ -13,7 +13,9 @@ class statementPrint:public statement
 {
 public:
     statementPrint(list<exprArgument*> *arguments, int linea);
+    newStatement * ValidarSemantica();
     void print();
+
 private:
     list<exprArgument*> *arguments;
 

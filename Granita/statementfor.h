@@ -13,6 +13,7 @@ class statementFor:public statement
 public:
     statementFor(list<statementAssign*> *initialValues,Expression *expr,
                  list<statementAssign*> *incrementValues,statementBlock *block, int linea);
+    newStatement* ValidarSemantica();
     void print();
 private:
     Expression *expr;

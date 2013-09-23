@@ -1,9 +1,9 @@
 #include "newstatementfor.h"
 
-newStatementFor::newStatementFor(list<newStatementAssign *> *initialValues,
+newStatementFor::newStatementFor(list<newStatement *> *initialValues,
                                  newExpression *expr,
-                                 list<newStatementAssign *> *incrementValues,
-                                 newStatementBlock *block)
+                                 list<newStatement *> *incrementValues,
+                                 newStatement *block)
 {
     this->initialValues = initialValues;
     this->expression = expr;

@@ -49,7 +49,7 @@ newProgram* program::ValidarSemantica() {
         it2++;
     }
 
-    newStatementBlock* main = NULL;
+    newStatement* main = NULL;
 
     list<statementMethodecl*>::iterator it1;
     it1 = this->methods->begin();

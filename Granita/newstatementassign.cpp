@@ -1,6 +1,6 @@
 #include "newstatementassign.h"
 
-newStatementAssign::newStatementAssign(newExprLvalue *lvalue, newExpr *value)
+newStatementAssign::newStatementAssign(newExpression *lvalue, newExpression *value)
 {
     this->lvalue = lvalue;
     this->value = value;

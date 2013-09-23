@@ -11,6 +11,7 @@ class statementReturn: public statement
 {
 public:
     statementReturn(Expression* returnValue, int linea);
+    newStatement * ValidarSemantica();
     void print();
 
 private:

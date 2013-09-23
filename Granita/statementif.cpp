@@ -33,12 +33,12 @@ newStatement* statementIf::ValidarSemantica() {
     if (condicion == NULL) {
         return NULL;
     }
-    if (condicion->tipo != BOOL) {
+    if (condicion->tipo != newExpression::BOOL) {
         PrintError("Condicion del if debe ser booleana");
         return NULL;
     }
-    newStatementBlock* newTrueBlock = this->block_true->ValidarSemantica();
-    newStatementBlock* newFalseBlock = this->block_false->ValidarSemantica();
+    newStatement* newTrueBlock = this->block_true->ValidarSemantica();
+    newStatement* newFalseBlock = this->block_false->ValidarSemantica();
     if (newTrueBlock == NULL) {
         return NULL;
     }

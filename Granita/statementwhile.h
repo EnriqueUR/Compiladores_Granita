@@ -13,7 +13,9 @@ class statementWhile:public statement
 {
 public:
     statementWhile(Expression *expr,statementBlock *block_true, int linea);
+    newStatement * ValidarSemantica();
     void print();
+
 private:
     Expression *expr;
     statementBlock *block_true;

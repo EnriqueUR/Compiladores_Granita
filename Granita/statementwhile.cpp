@@ -20,13 +20,13 @@ newStatement* statementWhile::ValidarSemantica() {
     if (condicion == NULL) {
         return NULL;
     }
-    if (condicion->tipo != BOOL) {
+    if (condicion->tipo != newExpression::BOOL){
         PrintError("Condicion en el while debe ser booleana");
         return NULL;
     }
 
-    newStatementBlock* newBlock = this->block_true->ValidarSemantica();
-    if (newBlock == NULL) {
+    newStatement* newBlock = this->block_true->ValidarSemantica();
+    if (newBlock == NULL){
         return NULL;
     }
 

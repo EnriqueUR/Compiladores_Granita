@@ -8,11 +8,11 @@
 class newStatementAssign: public newStatement
 {
 public:
-    newStatementAssign(newExprLvalue* lvalue, newExpr* value);
+    newStatementAssign(newExpression* lvalue, newExpression* value);
 
 protected:
-    newExprLvalue* lvalue;
-    newExpr* value;
+    newExpression* lvalue;
+    newExpression* value;
 };
 
 #endif // NEWSTATEMENTASSIGN_H

@@ -13,6 +13,8 @@ class statementRead:public statement
 {
 public:
     statementRead(list<exprLvalue*> *lvalue, int linea);
+    newStatement * ValidarSemantica();
+
     void print();
 private:
     list<exprLvalue*> *lvalue;

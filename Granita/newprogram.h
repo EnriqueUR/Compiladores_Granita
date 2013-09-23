@@ -1,15 +1,15 @@
 #ifndef NEWPROGRAM_H
 #define NEWPROGRAM_H
 
-#include "newstatementblock.h"
+#include "newstatement.h"
 
 class newProgram
 {
 public:
-    newProgram(newStatementBlock* main);
+    newProgram(newStatement* main);
 
 private:
-    newStatementBlock* main;
+    newStatement* main;
 };
 
 #endif // NEWPROGRAM_H

@@ -8,13 +8,13 @@
 class newStatementIf: public newStatement
 {
 public:
-    newStatementIf(newExpression* expresion, newStatementBlock* trueBlock,
-                   newStatementBlock* falseBlock);
-    newStatementIf(newExpression *expresion, newStatementBlock *trueBlock);
+    newStatementIf(newExpression* expresion, newStatement* trueBlock,
+                   newStatement* falseBlock);
+    newStatementIf(newExpression *expresion, newStatement *trueBlock);
 
 protected:
     newExpression* expresion;
-    newStatementBlock* trueBlock, *falseBlock;
+    newStatement* trueBlock, *falseBlock;
 };
 
 #endif // NEWSTATEMENTIF_H

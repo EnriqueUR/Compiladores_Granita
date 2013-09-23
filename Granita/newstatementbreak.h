@@ -1,7 +1,7 @@
 #ifndef NEWSTATEMENTBREAK_H
 #define NEWSTATEMENTBREAK_H
-
-class newStatementBreak
+#include "newstatement.h"
+class newStatementBreak: public newStatement
 {
 public:
     newStatementBreak();

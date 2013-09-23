@@ -1,7 +1,7 @@
 #ifndef NEWSTATEMENTCONTINUE_H
 #define NEWSTATEMENTCONTINUE_H
-
-class newStatementContinue
+#include "newstatement.h"
+class newStatementContinue:public newStatement
 {
 public:
     newStatementContinue();

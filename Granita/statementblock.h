@@ -9,6 +9,7 @@ class statementBlock:public statement
 {
 public:
     statementBlock(list<var_decl*> *vars,list<statement*> *sentences, int linea);
+    newStatement * ValidarSemantica();
     void print();
 private:
     list<var_decl*> *vars;

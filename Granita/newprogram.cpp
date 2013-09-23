@@ -1,6 +1,6 @@
 #include "newprogram.h"
 
-newProgram::newProgram(newStatementBlock *main)
+newProgram::newProgram(newStatement *main)
 {
     this->main = main;
 }
