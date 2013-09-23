@@ -48,8 +48,9 @@ void statementFieldecl::print()
             while((it1 != this->list_only_id->end())||(it3 != this->list_intConstant->end()))
             {
                 exprIntConstant* intconst = *it3;
-                cout<<*it2<<" ";
+                cout<<*it2<<"[";
                 intconst->print();
+                cout<<"]";
                 it2++;
                 it3++;
             }
