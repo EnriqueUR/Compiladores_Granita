@@ -42,3 +42,49 @@ void statementFor::print()
     this->block->print();
 
 }
+
+newStatement* statementFor::validarSemantica() {
+    list<newStatementAssign*> *inits = new list<newStatement*>();
+    list<statementAssign*>::iterator it1;
+    it1 = this->initialValues->begin();
+    while(it1 != this->initialValues->end())
+    {
+        statementAssign *st = *it1;
+        newStatementAssign* assi = (newStatementAssign*) st->validarSemantica();
+        if (assi == NULL) {
+            return NULL;
+        }
+        inits->push_back(assi);
+        it1++;
+    }
+
+    list<newStatementAssign*> *incrs = new list<newStatement*>();
+    list<statementAssign*>::iterator it2;
+    it2 = this->incrementValues->begin();
+    while(it2 != this->incrementValues->end())
+    {
+        statementAssign *st = *it2;
+        newStatementAssign* assi = (newStatementAssign*) st->validarSemantica();
+        if (assi == NULL) {
+            return NULL;
+        }
+        incrs->push_back(assi);
+        it2++;
+    }
+
+    newExpression* cond = expr->ValidarSermantica();
+    if (cond == NULL) {
+        return NULL;
+    }
+    if (cond->tipo != BOOL) {
+        PrintError("Condicion del For debe ser booleana");
+        return NULL;
+    }
+
+    newStatementBlock* newBlock = (newStatementBlock*) this->block->validarSemantica();
+    if (newBlock == NULL) {
+        return NULL;
+    }
+
+    return new newStatementFor(inits, expr, incrs, newBlock);
+}

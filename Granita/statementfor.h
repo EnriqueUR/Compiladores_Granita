@@ -5,6 +5,9 @@
 #include "expression.h"
 #include "statementassign.h"
 #include "statementblock.h"
+
+#include "newstatementfor.h"
+
 class statementFor:public statement
 {
 public:

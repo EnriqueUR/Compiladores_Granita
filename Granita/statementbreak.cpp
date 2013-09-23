@@ -8,3 +8,7 @@ void statementBreak::print()
 {
     cout<<"break";
 }
+
+newStatement* statementBreak::validarSemantica(){
+    return new newStatementBreak();
+}

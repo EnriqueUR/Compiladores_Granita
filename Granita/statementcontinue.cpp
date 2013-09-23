@@ -8,3 +8,8 @@ void statementContinue::print()
 {
     cout<<"continue";
 }
+
+
+newStatement* statementContinue::validarSemantica() {
+    return new newStatementContinue();
+}
