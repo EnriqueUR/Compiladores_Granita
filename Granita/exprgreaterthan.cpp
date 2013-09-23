@@ -21,7 +21,9 @@ newExpression * exprGreaterThan::ValidarSermantica()
         if(izq->tipo == newExpression::INT && der->tipo == newExpression::INT)
             return new newExprGreaterThan(izq,der);
         PrintError("Tipos Incompatibles");
+        return NULL;
     }
+    return NULL;
 
 }
 void exprGreaterThan::PrintError(string msj)

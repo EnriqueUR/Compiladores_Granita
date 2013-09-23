@@ -101,7 +101,8 @@ SOURCES += main.cpp \
     newexpression.cpp \
     newbinaryexpr.cpp \
     newunaryexpr.cpp \
-    singletontable.cpp
+    singletontable.cpp \
+    variable.cpp
 
 HEADERS += \
     lexico.h \
@@ -189,4 +190,5 @@ HEADERS += \
     newexpression.h \
     newbinaryexpr.h \
     newunaryexpr.h \
-    singletontable.h
+    singletontable.h \
+    variable.h

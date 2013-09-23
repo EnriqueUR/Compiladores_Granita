@@ -22,9 +22,10 @@ newExpression * exprEqual::ValidarSermantica()
             return new newExprEqual(izq,der);
         if(izq->tipo == newExpression::BOOL && der->tipo == newExpression::BOOL)
             return new newExprEqual(izq,der);
-
         PrintError("Tipos Incompatibles");
+        return NULL;
     }
+    return NULL;
 
 }
 void exprEqual::PrintError(string msj)

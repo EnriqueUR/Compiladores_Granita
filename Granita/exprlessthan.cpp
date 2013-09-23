@@ -21,7 +21,9 @@ newExpression * exprLessThan::ValidarSermantica()
         if(izq->tipo == newExpression::BOOL && der->tipo == newExpression::BOOL)
             return new newExprLessThan(izq,der);
         PrintError("Tipos Incompatibles");
+        return NULL;
     }
+    return NULL;
 
 }
 void exprLessThan::PrintError(string msj)

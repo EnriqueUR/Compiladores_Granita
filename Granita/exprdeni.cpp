@@ -21,7 +21,9 @@ newExpression * exprDeni::ValidarSermantica()
         if(expr->tipo == newExpression::BOOL)
             return new newExprDeni(expr);
         PrintError("Tipos Incompatibles");
+        return NULL;
     }
+    return NULL;
 
 }
 void exprDeni::PrintError(string msj)

@@ -21,7 +21,9 @@ newExpression * exprLessAndEqual::ValidarSermantica()
         if(izq->tipo == newExpression::INT && der->tipo == newExpression::INT)
             return new newExprLessAndEqual(izq,der);
         PrintError("Tipos Incompatibles");
+        return NULL;
     }
+    return NULL;
 
 }
 void exprLessAndEqual::PrintError(string msj)
