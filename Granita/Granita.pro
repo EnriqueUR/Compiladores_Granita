@@ -102,7 +102,8 @@ SOURCES += main.cpp \
     newbinaryexpr.cpp \
     newunaryexpr.cpp \
     singletontable.cpp \
-<<<<<<< HEAD
+<<<<<<< HEAD \
+    newprogram.cpp
     newstatementassign.cpp
 =======
     variable.cpp
@@ -195,7 +196,8 @@ HEADERS += \
     newbinaryexpr.h \
     newunaryexpr.h \
     singletontable.h \
-<<<<<<< HEAD
+<<<<<<< HEAD \
+    newprogram.h
     newstatementassign.h
 =======
     variable.h

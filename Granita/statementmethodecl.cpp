@@ -52,3 +52,11 @@ void statementMethodecl::print()
     this->block->print();
 
 }
+
+
+newStatement* statementMethodecl::ValidarSemantica() {
+
+    newStatementBlock* block = this->block->ValidarSemantica();
+
+    return block;
+}

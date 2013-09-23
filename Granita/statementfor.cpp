@@ -50,7 +50,7 @@ newStatement* statementFor::ValidarSemantica() {
     while(it1 != this->initialValues->end())
     {
         statementAssign *st = *it1;
-        newStatementAssign* assi = (newStatementAssign*) st->validarSemantica();
+        newStatementAssign* assi = (newStatementAssign*) st->ValidarSemantica();
         if (assi == NULL) {
             return NULL;
         }
@@ -64,7 +64,7 @@ newStatement* statementFor::ValidarSemantica() {
     while(it2 != this->incrementValues->end())
     {
         statementAssign *st = *it2;
-        newStatementAssign* assi = (newStatementAssign*) st->validarSemantica();
+        newStatementAssign* assi = (newStatementAssign*) st->ValidarSemantica();
         if (assi == NULL) {
             return NULL;
         }
@@ -81,7 +81,7 @@ newStatement* statementFor::ValidarSemantica() {
         return NULL;
     }
 
-    newStatementBlock* newBlock = (newStatementBlock*) this->block->validarSemantica();
+    newStatementBlock* newBlock = (newStatementBlock*) this->block->ValidarSemantica();
     if (newBlock == NULL) {
         return NULL;
     }
