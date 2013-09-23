@@ -44,6 +44,10 @@ newExpression * exprLvalue::ValidarSermantica()
     if(this->expr!= NULL)
     {
         newExpression *newexpr = this->expr->ValidarSermantica();
+        if (newexpr->tipo != newExpression::INT) {
+            PrintError("indice del arreglo debe ser int");
+            return NULL;
+        }
         return new newExprLvalue(this->id,newexpr);
     }
     else

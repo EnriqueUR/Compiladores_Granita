@@ -57,3 +57,57 @@ void statementFieldecl::print()
 
     }
 }
+
+
+newStatement* statementFieldecl::ValidarSemantica() {
+    if (this->constant != NULL) {
+        Variable* var = SingletonTable::getInstance()->getSimbolo(this->id);
+        if (var != NULL) {
+            PrintError("variable " + this->id + " ya esta definida");
+        } else {
+            var = new VariableSimple(this->tipo);
+            SingletonTable::getInstance()->putSimbolo(this->id, var);
+        }
+    } else {
+        list<string>::iterator it1;
+        it1 = this->list_only_id->begin();
+        while(it1 != this->list_only_id->end())
+        {
+            Variable* var = SingletonTable::getInstance()->getSimbolo(*it1);
+            if (var != NULL) {
+                PrintError("variable " + *it1 + " ya esta definida");
+            } else {
+                var = new VariableSimple(this->tipo);
+                SingletonTable::getInstance()->putSimbolo(*it1, var);
+            }
+            it1++;
+        }
+
+        if(this->list_id != NULL && this->list_intConstant!= NULL){
+            list<string>::iterator it2;
+            it2 = this->list_id->begin();
+
+            list<exprIntConstant *>::iterator it3;
+            it3 = this->list_intConstant->begin();
+            while((it1 != this->list_only_id->end())||(it3 != this->list_intConstant->end()))
+            {
+                exprIntConstant* intconst = *it3;
+                newExpression* index = intconst->ValidarSermantica();
+                if (index == NULL) {
+                    return NULL;
+                }
+
+                Variable* var = SingletonTable::getInstance()->getSimbolo(*it1);
+                if (var != NULL) {
+                    PrintError("variable " + *it1 + " ya esta definida");
+                } else {
+                    var = new VariableArreglo(this->tipo, index);
+                    SingletonTable::getInstance()->putSimbolo(*it1, var);
+                }
+                it2++;
+                it3++;
+            }
+        }
+    }
+
+}

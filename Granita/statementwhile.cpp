@@ -16,6 +16,7 @@ void statementWhile::print()
 
 
 newStatement* statementWhile::ValidarSemantica() {
+    AnalisisSemantico::dentroCiclo = true;
     newExpression* condicion = this->expr->ValidarSermantica();
     if (condicion == NULL) {
         return NULL;

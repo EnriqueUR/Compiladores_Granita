@@ -44,6 +44,7 @@ void statementFor::print()
 }
 
 newStatement* statementFor::ValidarSemantica() {
+    AnalisisSemantico::dentroCiclo = true;
     list<newStatement*> *inits = new list<newStatement*>();
     list<statementAssign*>::iterator it1;
     it1 = this->initialValues->begin();

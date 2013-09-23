@@ -104,7 +104,10 @@ SOURCES += main.cpp \
     singletontable.cpp \
     newprogram.cpp\
     newstatementassign.cpp\
-    variable.cpp
+    variable.cpp \
+    analisissemantico.cpp \
+    variablesimple.cpp \
+    variablearreglo.cpp
 
 HEADERS += \
     lexico.h \
@@ -195,4 +198,7 @@ HEADERS += \
     singletontable.h \
     newprogram.h\
     newstatementassign.h\
-    variable.h
+    variable.h \
+    analisissemantico.h \
+    variablesimple.h \
+    variablearreglo.h

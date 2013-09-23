@@ -11,5 +11,9 @@ void statementContinue::print()
 
 
 newStatement* statementContinue::ValidarSemantica() {
+    if (!AnalisisSemantico::dentroCiclo) {
+        PrintError("continue debe estar dentro de un ciclo");
+        return NULL;
+    }
     return new newStatementContinue();
 }

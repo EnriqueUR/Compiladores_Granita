@@ -43,9 +43,7 @@ newProgram* program::ValidarSemantica() {
     {
         statementFieldecl *m;
         m = *it2;
-        if (m->ValidarSemantica() == NULL) {
-            return NULL;
-        }
+        m->ValidarSemantica();
         it2++;
     }
 
