@@ -4,6 +4,9 @@
 #include "statement.h"
 #include "expression.h"
 
+#include "newstatement.h"
+#include "newstatementreturn.h"
+
 class statementReturn: public statement
 {
 public:

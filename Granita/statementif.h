@@ -4,7 +4,10 @@
 #include "expression.h"
 #include "statementblock.h"
 
-class statementIf:public statement
+#include "newstatementblock.h"
+#include "newstatementif.h"
+
+class statementIf : public statement
 {
 public:
     statementIf(Expression *expr,statementBlock *block_true, int linea);

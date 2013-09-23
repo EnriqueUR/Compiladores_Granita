@@ -11,3 +11,10 @@ void statementReturn::print()
     if(this->returnValue!=NULL)
         this->returnValue->print();
 }
+
+
+newStatement* statementReturn::ValidarSemantica() {
+    newExpression* retVal = this->returnValue->ValidarSermantica();
+
+    return new newStatementReturn(retVal);
+}

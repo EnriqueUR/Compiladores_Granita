@@ -10,6 +10,7 @@ public:
     statement();
     virtual void print() = 0;
     int Linea;
+
     virtual newStatement *ValidarSemantica();
     virtual void PrintError(string msj);
 

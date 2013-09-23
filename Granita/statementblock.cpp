@@ -29,3 +29,7 @@ void statementBlock::print()
     }
     cout<<"}"<<endl;
 }
+
+newStatement* statementBlock::ValidarSemantica() {
+
+}

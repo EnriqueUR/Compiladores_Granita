@@ -1,6 +1,7 @@
 #ifndef STATEMENTCONTINUE_H
 #define STATEMENTCONTINUE_H
 
+#include "newstatementcontinue.h"
 #include "statement.h"
 
 class statementContinue: public statement

@@ -3,6 +3,12 @@
 #include "statement.h"
 #include "expression.h"
 #include "statementblock.h"
+
+#include "newstatement.h"
+#include "newexpression.h"
+#include "newstatementblock.h"
+#include "newstatementwhile.h"
+
 class statementWhile:public statement
 {
 public:

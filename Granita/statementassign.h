@@ -4,6 +4,8 @@
 #include "expression.h"
 #include "statement.h"
 
+#include "newstatementassign.h"
+
 class statementAssign:public statement
 {
 public:

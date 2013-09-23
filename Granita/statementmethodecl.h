@@ -4,6 +4,8 @@
 #include "statementdeclaration.h"
 #include "statementblock.h"
 
+#include "newstatementblock.h"
+
 using namespace std;
 class statementMethodecl:public statementDeclaration
 {

@@ -12,3 +12,17 @@ void statementAssign::print()
     cout<<"=";
     this->expr->print();
 }
+
+newStatement* statementAssign::ValidarSemantica() {
+    newExprLvalue* newLvalue = lvalue->ValidarSermantica();
+    newExpression* newExprValue = expr->ValidarSermantica();
+
+    if (newLvalue == NULL || newExprValue == NULL) {
+        return NULL;
+    }
+    if (newLvalue->tipo != newExprValue->tipo) {
+        PrintError("Tipos Incompatibles");
+        return NULL;
+    }
+    return new newStatementAssign(newLvalue, newExprValue);
+}

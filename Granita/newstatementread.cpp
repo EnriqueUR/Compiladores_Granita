@@ -1,5 +1,6 @@
 #include "newstatementread.h"
 
-newStatementRead::newStatementRead()
+newStatementRead::newStatementRead(list<newExprLvalue *> *args)
 {
+    this->args = args;
 }
