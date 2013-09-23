@@ -18,7 +18,9 @@ newExpression * exprNegative::ValidarSermantica()
         if(expr->tipo == newExpression::INT)
             return new newExprNegative(expr);
         PrintError("Tipos Incompatibles");
+        return NULL;
     }
+    return NULL;
 }
 void exprNegative::PrintError(string msj)
 {

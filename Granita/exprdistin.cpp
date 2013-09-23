@@ -23,7 +23,9 @@ newExpression * exprDistin::ValidarSermantica()
         if(izq->tipo == newExpression::BOOL && der->tipo == newExpression::BOOL)
             return new newExprDistin(izq,der);
         PrintError("Tipos Incompatibles");
+        return NULL;
     }
+    return NULL;
 
 }
 void exprDistin::PrintError(string msj)

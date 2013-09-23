@@ -21,7 +21,9 @@ newExpression * exprShiftRight::ValidarSermantica()
         if(izq->tipo == newExpression::INT && der->tipo == newExpression::INT)
             return new newExprShiftRight(izq,der);
         PrintError("Tipos Incompatibles");
+        return NULL;
     }
+    return NULL;
 
 }
 void exprShiftRight::PrintError(string msj)

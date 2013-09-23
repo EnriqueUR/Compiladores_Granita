@@ -21,7 +21,9 @@ newExpression * exprAnd::ValidarSermantica()
         if(izq->tipo == newExpression::BOOL && der->tipo == newExpression::BOOL)
             return new newExprAnd(izq,der);
         PrintError("Tipos Incompatibles");
+        return NULL;
     }
+    return NULL;
 
 }
 void exprAnd::PrintError(string msj)

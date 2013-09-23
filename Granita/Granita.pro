@@ -102,7 +102,11 @@ SOURCES += main.cpp \
     newbinaryexpr.cpp \
     newunaryexpr.cpp \
     singletontable.cpp \
+<<<<<<< HEAD
     newstatementassign.cpp
+=======
+    variable.cpp
+>>>>>>> f120c4fc22361d1debd8011e664e906ef9d2f3c8
 
 HEADERS += \
     lexico.h \
@@ -191,4 +195,8 @@ HEADERS += \
     newbinaryexpr.h \
     newunaryexpr.h \
     singletontable.h \
+<<<<<<< HEAD
     newstatementassign.h
+=======
+    variable.h
+>>>>>>> f120c4fc22361d1debd8011e664e906ef9d2f3c8

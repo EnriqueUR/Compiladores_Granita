@@ -21,7 +21,9 @@ newExpression * exprMode::ValidarSermantica()
         if(izq->tipo == newExpression::INT && der->tipo == newExpression::INT)
             return new newExprMode(izq,der);
         PrintError("Tipos Incompatibles");
+        return NULL;
     }
+    return NULL;
 
 }
 void exprMode::PrintError(string msj)

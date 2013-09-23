@@ -21,7 +21,9 @@ newExpression * exprDiv::ValidarSermantica()
         if(izq->tipo == newExpression::INT && der->tipo == newExpression::INT)
             return new newExprDiv(izq,der);
         PrintError("Tipos Incompatibles");
+        return NULL;
     }
+    return NULL;
 
 }
 void exprDiv::PrintError(string msj)
