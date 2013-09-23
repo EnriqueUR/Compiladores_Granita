@@ -12,5 +12,6 @@ int main()
     program *p;
     p = S->Program();
     p->print();
+    p->ValidarSemantica();
     system("pause");
 }

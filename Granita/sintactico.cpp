@@ -142,7 +142,7 @@ statementFieldecl* sintactico::FieldDecl(Token T[])
                         continue;
 
                 }
-                else if(CurrentToken->tipo == COMA)
+                else
                 {
                     list_only_id->push_back(stemp);
                     continue;
@@ -161,6 +161,7 @@ statementFieldecl* sintactico::FieldDecl(Token T[])
     }
     else if(CurrentToken->tipo == COMA)
     {
+        string vartemp = T[1].lexema;
         while(CurrentToken->tipo == COMA)
         {
             CurrentToken = Lexer->NexToken();
@@ -170,6 +171,7 @@ statementFieldecl* sintactico::FieldDecl(Token T[])
                 CurrentToken = Lexer->NexToken();
                 if(CurrentToken->tipo == CORCHETE_I)
                 {
+                    //vartemp = " ";
                     list_id->push_back(stemp);
                     CurrentToken = Lexer->NexToken();
                     if(CurrentToken->tipo != INTCONSTANT)
@@ -192,11 +194,16 @@ statementFieldecl* sintactico::FieldDecl(Token T[])
                         continue;
 
                 }
-                else if(CurrentToken->tipo == COMA)
+                else
                 {
                     list_only_id->push_back(stemp);
-                    continue;
                 }
+
+                if(vartemp != " "){
+                    list_only_id->push_back(vartemp);
+                    vartemp = " ";
+                }
+
             }
         }
         if(CurrentToken->tipo != PUNTO_COMA)
@@ -234,7 +241,7 @@ statementFieldecl* sintactico::FieldDecl(Token T[])
         return NULL;
     }
     CurrentToken = Lexer->NexToken();
-    list_id->push_back(T[1].lexema);
+    list_only_id->push_back(T[1].lexema);
     return new statementFieldecl(tipo,list_only_id,NULL,NULL,Lexer->linea); //lista de variables solo con 1 elemento
 }
 
