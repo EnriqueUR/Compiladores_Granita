@@ -12,6 +12,7 @@ SingletonTable* SingletonTable::getInstance ()
 SingletonTable::SingletonTable()
 {
     TablaSimbolos = new map<string,Variable*>();
+    Procedimientos = new map<string, Procedimiento*>();
 }
 
 Variable* SingletonTable::getSimbolo(string nombre) {
@@ -23,4 +24,15 @@ Variable* SingletonTable::getSimbolo(string nombre) {
 
 void SingletonTable::putSimbolo(string nombre, Variable *var) {
     TablaSimbolos->insert(pair<string, Variable*>(nombre, var));
+}
+
+Procedimiento* SingletonTable::getProcedimiento(string nombre) {
+    if (Procedimientos->count(nombre) > 0) {
+        return Procedimientos->at(nombre);
+    }
+    return NULL;
+}
+
+void SingletonTable::putProcedimiento(string nombre, Procedimiento *var) {
+    Procedimientos->insert(pair<string, Procedimiento*>(nombre, var));
 }

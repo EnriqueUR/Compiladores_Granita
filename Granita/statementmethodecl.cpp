@@ -55,8 +55,18 @@ void statementMethodecl::print()
 
 
 newStatement* statementMethodecl::ValidarSemantica() {
+    TablaSimbolosLocal* actual = new TablaSimbolosLocal();
 
+    AnalisisSemantico::tablaActual = actual;
     newStatement* block = this->block->ValidarSemantica();
+
+    if (SingletonTable::getInstance()->getProcedimiento(this->method_name) != NULL) {
+        PrintError("Metodo " + this->method_name + " ya definido");
+        return NULL;
+    }
+
+    Procedimiento* proc = new Procedimiento((newStatementBlock*)block);
+    SingletonTable::getInstance()->putProcedimiento(this->method_name, proc);
 
     return block;
 }
