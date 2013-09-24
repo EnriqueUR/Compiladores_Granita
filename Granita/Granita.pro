@@ -107,7 +107,9 @@ SOURCES += main.cpp \
     variable.cpp \
     analisissemantico.cpp \
     variablesimple.cpp \
-    variablearreglo.cpp
+    variablearreglo.cpp \
+    procedimiento.cpp \
+    tablasimboloslocal.cpp
 
 HEADERS += \
     lexico.h \
@@ -201,4 +203,6 @@ HEADERS += \
     variable.h \
     analisissemantico.h \
     variablesimple.h \
-    variablearreglo.h
+    variablearreglo.h \
+    procedimiento.h \
+    tablasimboloslocal.h

@@ -2,9 +2,14 @@
 #define STATEMENTMETHODECL_H
 #include <list>
 #include "statementdeclaration.h"
+#include "procedimiento.h"
 #include "statementblock.h"
 
 #include "newstatementblock.h"
+
+#include "singletontable.h"
+#include "tablasimboloslocal.h"
+#include "analisissemantico.h"
 
 using namespace std;
 class statementMethodecl:public statementDeclaration
